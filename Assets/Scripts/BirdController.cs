@@ -44,6 +44,7 @@ public class BirdController : MonoBehaviour
         if (other.CompareTag("Pipe") || other.CompareTag("Ground") || other.CompareTag("AngryBird") )
         {
             GameManager.Instance.GameOver();
+            Debug.Log("gg");
         }
     }
 }
