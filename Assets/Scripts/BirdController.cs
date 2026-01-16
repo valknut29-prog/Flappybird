@@ -7,7 +7,10 @@ public class BirdController : MonoBehaviour
     [SerializeField] Animator animator;
     public float jumpForce = 5f;
     private Rigidbody2D rb;
-    
+    [TextArea]
+    public string npcText = "Привет! Как дела?";
+    public string[] answers;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -46,5 +49,12 @@ public class BirdController : MonoBehaviour
             GameManager.Instance.GameOver();
             Debug.Log("gg");
         }
+        
+       /* if (other.CompareTag("LoveBird"))
+        {
+            DialogueManager.Instance.StartDialogue(npcText, answers);
+            Debug.Log("LoveBird");
+           // gameObject.SetActive(false); // исчезает после диалога
+        } */
     }
 }
